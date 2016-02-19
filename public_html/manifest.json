@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "露天拍賣訂單擷取",
+    "version": "1.7",
+    "description": "可從露天拍賣進行訂單擷取。必須先登入露天拍賣後台，到訂單管理中待確認頁面使用。選項頁面提供商品標題關鍵字管理，使擴充功能直接擷取商品的品牌及系列。",
+    "author": "Shen-Teng Tu",
+    "permissions": ["tabs", "activeTab", "storage", "downloads"],
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "browser_action": {
+        "default_title": "露天拍賣訂單擷取",
+        "default_icon": {
+            "38": "img/icon38-default.png"
+        },
+        "default_popup": ""
+    },
+    "background": {
+        "scripts": ["js/jquery-2.1.4.min.js","js/background.js"],
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": false,
+        "open_in_tab": true
+    },
+    "content_scripts": [{
+            "matches": ["http://mybid.ruten.com.tw/master/*", "https://mybid.ruten.com.tw/master/*","http://goods.ruten.com.tw/*","https://goods.ruten.com.tw/*"],
+            "css": ["css/content.css"],
+            "js": ["js/jquery-2.1.4.min.js", "js/content_script.js"],
+            "run_at":"document_end"
+        }],
+    "short_name": "RutenOderCapture",
+    "version_name": "1.7",
+    "content_security_policy": "script-src 'self'; object-src 'self'"
+}

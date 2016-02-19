@@ -1,0 +1,86 @@
+.tag-warning {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 1;
+  height: 16px;
+  position: absolute;
+  content: "";
+  padding: 8px 16px 8px 8px;
+  border: 1px solid rgba(255,232,25,1);
+  border-right-width: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: normal normal bold 10px/18px Arial, Helvetica, sans-serif;
+  color: rgba(255,232,25,1);
+  text-align: center;
+  text-transform: uppercase;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+  background: #f55519;
+  -webkit-box-shadow: 0 0 0 0 rgba(137,120,114,1) , 1px 3px 0 0 #897872 ;
+  box-shadow: 0 0 0 0 rgba(137,120,114,1) , 1px 3px 0 0 #897872 ;
+  float:left;
+  margin: -8px 0px 0px -128px;
+}
+
+.tag-warning::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 0;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  content: "";
+  top: 4px;
+  right: -10px;
+  border-top: 0 solid rgba(255,232,25,1);
+  border-right: 1px solid rgba(255,232,25,1);
+  border-bottom: 1px solid rgba(255,232,25,1);
+  border-left: 0 solid rgba(255,232,25,1);
+  -webkit-border-radius: 3px 2px 8px;
+  -moz-border-radius: 3px 2px 8px;
+  border-radius: 3px 2px 8px;
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #f55519;
+  -webkit-box-shadow: 0 3px 0 0 #897872 ;
+  box-shadow: 0 3px 0 0 #897872 ;
+  text-shadow: none;
+  -webkit-transform: rotateY(1deg) rotateZ(-45deg)   ;
+  transform: rotateY(1deg) rotateZ(-45deg)   ;
+}
+
+.tag-warning::after {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 0;
+  border: 1px solid rgba(255,232,25,1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #fcfcfc;
+  -webkit-box-shadow: 2px 2px 0 0 rgba(137,120,114,1) inset;
+  box-shadow: 2px 2px 0 0 rgba(137,120,114,1) inset;
+  text-shadow: none;
+}
+

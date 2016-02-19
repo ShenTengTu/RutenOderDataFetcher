@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <style>
+            #wrapper{
+                width:500px;
+            }
+
+            #progress-msg{
+                width:100%;
+            }
+
+            progress{
+                margin:4px auto;
+                -webkit-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 8px;
+            }
+
+            progress::-webkit-progress-bar {
+                background-color: #eee;
+                border-radius: 2px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+            }
+
+            progress::-webkit-progress-value {
+                background:
+                    -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
+                    -webkit-linear-gradient(left, #77b300, #99e600);
+                border-radius: 2px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w3-container"id="wrapper">
+
+            <h1 class="w3-center"><img src="img/icon48.png" style="margin:0 7px -14px 0px;"/>露天拍賣訂單擷取</h1>
+            <hr>
+            <ul>
+                <li>請先確認目前保持登入狀態再使用，避免讀取不到資料。</li>
+                <li>若處於等待修改訂單狀態，收件人會顯示買家修改訂單。</li>
+                <li>建議設定商品規格，如沒設定規格，會顯示未設定規格。</li>
+            </ul>
+            <div class="w3-container">
+                <div class="w3-row">
+                    <div class="w3-col s5">
+                        <input class="w3-input w3-border w3-small w3-center" type="text" id="lastOderId" maxlength="14" placeholder="最後擷取訂單編號(必填)"/>
+                    </div>
+                    <div class="w3-col s2 w3-center">
+                        <button class="w3-btn w3-medium w3-blue w3-text-shadow" id="run">擷取</button>
+                    </div>
+                    <div class="w3-col s5 w3-center">
+                        <button class="w3-btn w3-medium w3-green w3-text-shadow" id="progress-msg" disabled>..........</button>
+                        <samp></samp>
+                    </div>
+                </div>       
+                <progress id="progressBar" value="0"></progress>
+            </div>
+
+        </div>
+        <script src="js/popup.js"></script>
+    </body>
+</html>

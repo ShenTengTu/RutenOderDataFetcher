@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>露天拍賣訂單擷取─選項頁面</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/options.js"></script>
+        <style>
+            input[type="text"]{
+                width:20em;
+            }
+
+            button{
+                margin-left:1em;
+                margin-right:1em;
+            }
+
+            .w3-row{
+                margin-top:0.5em;
+                margin-bottom:0.5em;
+            }
+
+            .input-group>*{
+                display:inline;
+            }
+            
+            .tag-container{
+                min-height: 48px;
+            }
+
+            .keyword-tag{
+                color: #000 !important;
+                background-color: #9e9e9e !important;
+                border-radius: 32px !important;
+                font-size: 12px !important;
+                border: none;
+                margin-left:0.2em;
+                margin-top:0.2em;
+                outline: 0;
+                padding: 6px 16px;
+                vertical-align: middle;
+                overflow: hidden;
+                text-decoration: none !important;
+                text-align: center;
+                white-space: nowrap;
+                float:left;
+            }
+
+            .keyword-tag-delete{
+                text-shadow: 1px 1px 1px #444;
+                letter-spacing: 2px;
+                color: #fff !important;
+                font-size: 12px !important;
+                margin-left:0.5em;
+            }
+
+            .storage-state{
+                float:right;
+                margin:17px 0px;
+                padding:0;
+            }
+            
+            nav>a{
+                padding:10px 8px 7px 8px!important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w3-container" id="wrapper">
+            <h1><img src="img/icon48.png" style="margin:0 7px -14px 0px;"/>露天拍賣訂單擷取─選項頁面</h1>
+            <hr>
+            <nav class="w3-topnav w3-blue">
+              <a class="w3-indigo" data-name="keyword_management">露天商品頁面標題關鍵字管理</a>
+              <a data-name="oder_record_management">露天訂單紀錄管理</a>
+            </nav>
+            <div class="w3-container" id="keyword_management">
+                <div class="w3-container storage-state" id="sync_storage_state">
+                    <kbd id="sync_storage_inuse"></kbd>
+                    <button class="w3-btn w3-small w3-orange w3-text-white w3-text-shadow" id="clear_sync_storage">清空同步儲存空間</button>
+                    <button class="w3-btn w3-small w3-green w3-text-shadow" id="sync_export_data">從同步儲存空間匯出資料</button>
+                    <button class="w3-btn w3-small w3-green w3-text-shadow" id="sync_import_data">匯入資料至同步儲存空間</button>
+                </div>
+                <h2>露天商品頁面標題關鍵字管理</h2>
+                <p>此項設定能夠讓擴充功能在擷取訂單時能得知商品的品牌及系列；設定的關鍵字會儲存在同步空間。</p>
+                <div class="w3-container w3-row w3-border">
+                    <h3>品牌關鍵字</h3>
+                    <div class="w3-row input-group">
+                        <input class="w3-input w3-border w3-small" type="text" maxlength="32">
+                        <button class="w3-btn w3-medium w3-blue w3-text-shadow add-keyword">添加</button>
+                    </div>
+                    <ul class="w3-row w3-light-grey w3-padding tag-container" id="brand_tag_container"></ui>
+                </div>
+                <div class="w3-container w3-row w3-border">
+                    <h3>品牌系列關鍵字</h3>
+                    <div class="w3-row input-group">
+                        <input class="w3-input w3-border w3-small" type="text" maxlength="32">
+                        <button class="w3-btn w3-medium w3-blue w3-text-shadow add-keyword">添加</button>
+                    </div>
+                    <ul class="w3-row w3-light-grey w3-padding tag-container" id="series_tag_container"></ui>
+                </div>  
+            </div>
+            
+            <div class="w3-container" id="oder_record_management" style="display: none;">
+                <div class="w3-container storage-state" id="local_storage_state">
+                    <kbd id="local_storage_inuse"></kbd>
+                    <button class="w3-btn w3-small w3-orange w3-text-white w3-text-shadow" id="clear_local_storage">清空本地儲存空間</button>
+                    <button class="w3-btn w3-small w3-green w3-text-shadow" id="local_export_data">從本地儲存空間匯出資料</button>
+                    <button class="w3-btn w3-small w3-green w3-text-shadow" id="local_import_data">匯入資料至本地儲存空間</button>
+                </div>
+                <h2>露天訂單紀錄管理</h2>
+                <p>此項設定能夠讓擴充功能紀錄訂單資料；訂單紀錄儲存在本地空間。</p>
+            </div>
+        </div>
+    </body>
+</html>

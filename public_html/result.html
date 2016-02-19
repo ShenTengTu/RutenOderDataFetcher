@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>露天拍賣訂單擷取─結果頁面</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/papaparse.min.js"></script>
+        <script src="js/result.js"></script>
+        <style>
+            button{
+                margin-left:1em;
+                margin-right:1em;
+            }
+
+            .odd-part{
+                background-color: #fdfdfd;
+            }
+            
+            .even-part{
+                background-color: #f0f0f0;
+            }
+            
+            .w3-row{
+                margin-top:0.5em;
+                margin-bottom:0.5em;
+            }
+            
+            #oder_table_wrapper{
+                padding:16px 16px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="w3-container"id="wrapper">
+            <h1><img src="img/icon48.png" style="margin:0 7px -14px 0px;"/>露天拍賣訂單擷取─結果頁面</h1>
+            <hr>
+            <div class="w3-container">
+                <div class="w3-row" id="button_wrapper" >
+                </div>
+                <div class="w3-container" id="oder_table_wrapper"></div>
+            </div>  
+        </div>
+    </body>
+</html>
